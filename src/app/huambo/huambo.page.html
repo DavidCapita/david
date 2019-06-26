@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>huambo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        Locais do Huambo
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Grastonomia
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/comidaHu.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2>Um bom peixe com feijão e mandioca</h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/cachupaHu.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2>Uma boa Cachupa</h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/cimidaHuam.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2>Milho comolho</h2>
+        
+      </ion-item>
+      ...
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/huamboo.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2></h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/huambo 1.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2></h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/hua.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2></h2>
+        
+      </ion-item>
+      ...
+    </ion-list>
+  </div>
+</ion-content>

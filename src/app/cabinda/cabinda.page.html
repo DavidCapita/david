@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cabinda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        Locais de Cabinda
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Grastonomia
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/fumbua.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2>Uma boa fumbua de peixe</h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/comidaCab.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2>Um arroz com feijão</h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/comidaCab1.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2>Muamba</h2>
+        
+      </ion-item>
+      ...
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/aeroporto.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2></h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/cab.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2></h2>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <ion-img src="/assets/fotos/maiombe.jpeg"></ion-img>
+        </ion-thumbnail>
+        <h2></h2>
+        
+      </ion-item>
+      ...
+    </ion-list>
+  </div>
+</ion-content>
